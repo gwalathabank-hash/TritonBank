@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Triton Isle Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="displayDashboard()">
+  <div class="dashboard-box">
+    <h2 id="welcomeTitle"></h2>
+    <table>
+      <tr><td>Account holder:</td><td id="accountName"></td></tr>
+      <tr><td>Account number:</td><td id="accountNumber"></td></tr>
+      <tr><td>Account type:</td><td id="accountType"></td></tr>
+      <tr><td>Currency:</td><td id="currency"></td></tr>
+      <tr><td>Current balance:</td><td id="currentBalance"></td></tr>
+      <tr><td>Last login:</td><td id="lastLogin"></td></tr>
+    </table>
+    <div class="footer">
+      <a href="index.html" onclick="localStorage.removeItem('triton_loggedin')">Logout</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
