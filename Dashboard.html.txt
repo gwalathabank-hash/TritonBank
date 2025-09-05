@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Triton Isle Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>👑 Welcome, King Brian</h1>
+    <section>
+      <h2>🏦 Account Overview</h2>
+      <ul>
+        <li><strong>Account Name:</strong> King Brian</li>
+        <li><strong>Account Number:</strong> #TRITON0012345</li>
+        <li><strong>Account Type:</strong> Premium Savings</li>
+        <li><strong>Currency:</strong> USD</li>
+        <li><strong>Current Balance:</strong> $638,832.00</li>
+      </ul>
+    </section>
+    <section>
+      <h2>🔐 Security</h2>
+      <ul>
+        <li>Two-Factor Authentication: Enabled</li>
+        <li>Last Login: September 5, 2025 — 07:26 PDT</li>
+        <li>Device: iOS 18.5</li>
+      </ul>
+    </section>
+    <section>
+      <h2>📈 Quick Actions</h2>
+      <button>View Transactions</button>
+      <button>Transfer Funds</button>
+      <button>Download Statement</button>
+      <button>Update Profile</button>
+    </section>
+  </div>
+</body>
+</html>

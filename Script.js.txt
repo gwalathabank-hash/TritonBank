@@ -1,0 +1,11 @@
+function loginUser() {
+  const user = document.getElementById('userid').value;
+  const pass = document.getElementById('password').value;
+
+  if (user === "KBrian001" && pass === "PASS12345") {
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Invalid credentials. Please try again.");
+  }
+  return false;
+}
