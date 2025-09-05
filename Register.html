@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Triton Isle Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Create New Account</h2>
+    <form onsubmit="return registerUser()">
+      <input type="text" id="reg_userid" placeholder="User ID" required>
+      <input type="password" id="reg_password" placeholder="Password" required>
+      <input type="text" id="reg_name" placeholder="Account Name" required>
+      <input type="text" id="reg_account_type" placeholder="Account Type (e.g. Premium Savings)" required>
+      <input type="text" id="reg_currency" placeholder="Currency (e.g. USD)" required>
+      <input type="number" id="reg_balance" placeholder="Initial Balance" required>
+      <button type="submit">Register</button>
+    </form>
+    <div class="footer"><a href="index.html">Back to Login</a></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
