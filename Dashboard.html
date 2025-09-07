@@ -2,24 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard | Triton Isle Bank</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Triton Isle Bank & Trust - Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #003366, #0055a5);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      color: #333;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+    h2, h1 {
+      text-align: center;
+      color: #003366;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0055a5;
+    }
+    .dashboard {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 8px 0;
+    }
+    section {
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body onload="displayDashboard()">
-  <div class="dashboard-box">
-    <h2 id="welcomeTitle"></h2>
-    <table>
-      <tr><td>Account holder:</td><td id="accountName"></td></tr>
-      <tr><td>Account number:</td><td id="accountNumber"></td></tr>
-      <tr><td>Account type:</td><td id="accountType"></td></tr>
-      <tr><td>Currency:</td><td id="currency"></td></tr>
-      <tr><td>Current balance:</td><td id="currentBalance"></td></tr>
-      <tr><td>Last login:</td><td id="lastLogin"></td></tr>
-    </table>
-    <div class="footer">
-      <a href="index.html" onclick="localStorage.removeItem('triton_loggedin')">Logout</a>
-    </div>
+<body>
+  <div class="container" id="login-box">
+    <h2>Login to Triton Isle Bank</h2>
+    <form onsubmit="return loginUser()">
+      <input type="text" id="userid" placeholder="User ID" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
   </div>
-  <script src="script.js"></script>
+
+  <div class="container dashboard" id="brian-dashboard">
+    <h1>👑 Welcome, King Brian</h1>
+    <section>
+      <h2>🏦 Account Overview</h2>
+      <ul>
+        <li><strong>Account Number:</strong> #TRITON0012345</li>
+        <li><strong>Account Type:</strong> Premium Savings</li>
+        <li><strong>Currency:</strong> USD</li>
+        <li><strong>Current Balance:</strong> $638,832.00</li>
+      </ul>
+    </section>
+    <section>
+      <h2>🔐 Security</h2>
+      <ul>
+        <li>Two-Factor Authentication: Enabled</li>
+        <li>Last Login: September 7, 2025 — 16:36 PDT</li>
+        <li>Device: iOS 18.5</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="container dashboard" id="kevin-dashboard">
+    <h1>👋 Welcome, Kevin</h1>
+    <section>
+      <h2>🏦 Account Overview</h2>
+      <ul>
+        <li><strong>Account Number:</strong> #TRITON0098765</li>
+        <li><strong>Account Type:</strong> Standard Checking</li>
+        <li><strong>Currency:</strong> USD</li>
+        <li><strong>Current Balance:</strong> $37,819,193.00</li>
+      </ul>
+    </section>
+    <section>
+      <h2>🔐 Security</h2>
+      <ul>
+        <li>Two-Factor Authentication: Enabled</li>
+        <li>Last Login: September 7, 2025 — 16:36 PDT</li>
+        <li>Device: iOS 18.5</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function loginUser() {
+      const user = document.getElementById('userid').value;
+      const pass = document.getElementById('password').value;
+
+      document.getElementById('login-box').style.display = 'none';
+
+      if (user === "KBrian001" && pass === "PASS12345") {
+        document.getElementById('brian-dashboard').style.display = 'block';
+      } else if (user === "Kevin002" && pass === "KEVsecure99") {
+        document.getElementById('kevin-dashboard').style.display = 'block';
+      } else {
+        alert("Invalid credentials. Please try again.");
+        document.getElementById('login-box').style.display = 'block';
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
